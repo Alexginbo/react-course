@@ -3,32 +3,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
+//useEffect() nos permite pasarle una función que se ejecutará cuando se monte el componente,
+//y cuando cambien la lista de dependencias que nosotros le digamos. Así que como mínimo se ejecutará
+//una vez
+
+//Si no le pasamos una lista de dependencias, el useEffect se hará cada vez que se renderice el
+//componente.
+
+//Si le pasamos un array vacío como lista de dependencias, solo se renderizará cuando se monte el
+//componente
+
+
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    
   )
 }
 
